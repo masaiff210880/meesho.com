@@ -1,39 +1,25 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchChildrensData, fetchLadiesData, fetchMensData } from "../src/store/slices/UserSlice";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Mens from "./components/products/mens";
-import Ladies from "./components/products/ladies";
-import Childrens from "./components/products/childrens";
-import Beauty from "./components/products/Beauty";
-import Jewellery from "./components/products/Jewellery";
-import Profile from "./components/products/Profile";
+
+import './App.css';
+import Navbar from '../src/Navbar/Navbar';
+import BelowSection from './Navbar/BelowSection';
+import Footer from './Footer/Footer';
+import Banner from './Banner/Banner';
+import TopBanner from './Banner/TopBanner';
 
 function App() {
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchMensData());
-    dispatch(fetchLadiesData());
-    dispatch(fetchChildrensData());
-  }, [dispatch]);
-
-
-
+  document.title ="Online Shopping Site for Fashion"
   return (
-    <>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Mens />} />
-        <Route path="/ladies" element={<Ladies />} />
-        <Route path="/beauty" element={<Beauty />} />
-        <Route path="/childrens" element={<Childrens />} />
-        <Route path="/jewellery" element={<Jewellery />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </Router>
-    </>
+    <div className="App">
+   
+      <Navbar/>
+      <BelowSection/>
 
+      <br/>
+      <Banner/>
+      <TopBanner/>
+      <br/>
+      <Footer/>
+    </div>
   );
 }
 
