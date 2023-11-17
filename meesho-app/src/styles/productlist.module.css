@@ -1,0 +1,40 @@
+/* ProductList.module.css */
+
+/* ProductList.module.css */
+
+.product-list {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures even spacing between items */
+    margin: 50px; /* Add margin around the product list */
+  }
+  
+  .product-item {
+    border: 1px solid #ccc;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+    margin: 10px 0; /* Adjust top and bottom margin */
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  
+  .product-img {
+    max-width: 100%;
+    height: 150px; /* Set a fixed height for the image container */
+    overflow: hidden;
+    /* height: auto; */
+  }
+  
+  .product-details {
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  
