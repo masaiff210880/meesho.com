@@ -1,53 +1,26 @@
-.bannerbackground{
-    background-image: url('../images/banner2.jpg');
+/* style.module.css */
+.card {
     display: flex;
-    gap: 15px;
-    margin: 48px 0px 60px;
-    background-image: url(https://images.meesho.com/images/marketing/1698036891727_1200.webp);
-    flex-direction: row;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 90px 24px 35px;
-    border-radius: 4px;
-    background-size: 100% 100%;
-}
-
-.bannerbg {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 60px;
-    height: 546px;
-    width: 80%;
-    background-image: url(https://images.meesho.com/images/marketing/1698037513933_1200.webp);
-    background-size: 100% 100%;
-    padding: 0px 24px 0px 28px;
-    border-radius: 4px;
+  }
+  
+  .bannercard {
+    background-color: white;
+    border-radius: 7px;
+    height: 55%;
+    width: 15%; /* Adjust the width as needed */
+    margin: 10px;
     position: relative;
-    left: 100px;
-}
-.card{
-    display: flex;
-}
-.bannercard{
-background-color: white;
-border-radius: 7px;
-height: 70%;
-width: 21%;
-margin: 10px;
-position: relative;
-left: 100px;
-}
-.imgstyle{
+    left: 150px;
+    display: flex; /* Use flex display for the inner container */
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center child elements horizontally */
+  }
+  
+  .imgstyle {
     border-radius: 5px;
     height: 150px;
-    align-items: center;
     text-align: center;
-    position: relative;
-    top: 25px;
-    left: 16px;
     width: 180px;
-    
-}
+    margin: 10px; /* Add margin for spacing between images */
+  }
+  
