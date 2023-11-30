@@ -4,7 +4,7 @@ import style from '../styles/Banner.module.css';
 import cardsimg from '../images/cardsimg.webp';
 import Bannerbutton from './Bannerbutton';
 
-const TopBanner = () => {
+const Banner3 = () => {
   const containerStyle = {
     position: 'relative',
     display: 'flex',
@@ -41,4 +41,4 @@ const TopBanner = () => {
   );
 };
 
-export default TopBanner;
+export default Banner3;

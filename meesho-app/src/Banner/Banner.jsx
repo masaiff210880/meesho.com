@@ -15,12 +15,12 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5';
-import { ReactElement } from 'react';
 import banner1 from '../images/banner1.webp'
 import vanicon from '../images/vanicon.svg'
 import moneyicon from '../images/moneyicon.svg'
 import shoppingicon from '../images/shopicon.svg'
 import playstoreicon from '../images/playstoreicon.png'
+
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
@@ -34,12 +34,10 @@ const Feature = ({ text, icon, iconBg }) => {
 
 const Banner = () => {
   return (
-    <Container maxW={'5xl'} py={12}>
+    <Container maxW={'5xl'} py={{ base: 6, md: 12 }}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={4} style={{textAlign:"left"}}>
-       
-          <Heading style={{textAlign:"left"}}>Lowest Prices <br />
-Best Quality Shopping</Heading>
+        <Stack spacing={4} textAlign={{ base: 'left', md: 'left' }}>
+          <Heading>Lowest Prices <br /> Best Quality Shopping</Heading>
         
           <Stack
             spacing={4}
@@ -48,40 +46,22 @@ Best Quality Shopping</Heading>
             }>
         
           </Stack>
-          <div style={{ display: 'flex' }}>
-  <div style={{ display: 'flex', alignItems: 'center' }}>
-   
-  </div>
-  <div style={{ borderRight: '1px solid black', color: 'black', display: 'flex', alignItems: 'center' }}>
-    <img src={vanicon} alt="Van Icon" style={{ marginRight: '8px' }} />
-    Free Delivery
-  </div> &nbsp;
-  <div style={{ borderRight: '1px solid black', color: 'black', display: 'flex', alignItems: 'center', marginRight:'30px'}}>
-    <img src={moneyicon} alt="Money Icon" style={{ marginRight: '8px' }} />
-    Cash on Delivery
-  </div> &nbsp;
-  <div style={{ color: 'black', display: 'flex', alignItems: 'center' }}>
-    <img src={shoppingicon} alt="Shopping Icon" style={{ marginRight: '8px' }} />
-    Easy Returns
-  </div>
-</div>
-<br />
-
-<div>
-            <Button colorScheme='pink'>
-                <img alt ="storeicon" src={playstoreicon}/> &nbsp;
-                Download the Meesho App
-            </Button>
-        </div>
+          <Flex direction={{ base: 'column', md: 'row' }} alignItems={{ base: 'flex-start', md: 'center' }}>
+            <Feature text="Free Delivery" iconBg="pink.200" icon={<Image src={vanicon} alt="Van Icon" />} />
+            <Feature text="Cash on Delivery" iconBg="blue.200" icon={<Image src={moneyicon} alt="Money Icon" />} />
+            <Feature text="Easy Returns" iconBg="green.200" icon={<Image src={shoppingicon} alt="Shopping Icon" />} />
+          </Flex>
+          <Button colorScheme='pink'>
+            <Image alt="storeicon" src={playstoreicon} /> &nbsp;
+            Download the Meesho App
+          </Button>
         </Stack>
       
         <Flex>
           <Image
             rounded={'md'}
             alt={'feature image'}
-            src={banner1
-              
-            }
+            src={banner1}
             objectFit={'cover'}
           />
         </Flex>
